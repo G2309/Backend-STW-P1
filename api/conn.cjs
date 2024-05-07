@@ -18,6 +18,9 @@ const pool = new Pool({
   database: 'blogs_database_j2vi',
   password: 'tfgyHfZeNH5QPomLOG5JaJKSe1lc5GB1',
   port: 5432,
+  ssl: {
+	rejectUnauthorized:false
+  }
 });
 
 // GET endpoint, will be used for a sidebar
