@@ -3,7 +3,7 @@ const { Pool } = require('pg');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 5432;
 
 // Middleware para permitir CORS
 app.use(cors());
@@ -13,11 +13,11 @@ app.use(express.json());
 
 // PostgreSQL connection
 const pool = new Pool({
-	user: 'blog_user',
-	host: 'localhost',
-	database: 'blogs_database',
-	password: 'blog123',
-	port: 5434,
+  user: 'blog_user',
+  host: 'dpg-cot77guv3ddc73farnng-a.oregon-postgres.render.com',
+  database: 'blogs_database_j2vi',
+  password: 'tfgyHfZeNH5QPomLOG5JaJKSe1lc5GB1',
+  port: 5432,
 });
 
 // GET endpoint, will be used for a sidebar
